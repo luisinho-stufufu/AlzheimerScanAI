@@ -57,6 +57,11 @@ El notebook `notebooks/01_inspect_split_images.ipynb` carga un sujeto
 determinista de cada partición y muestra los cortes sagital, coronal y axial de
 su volumen T1 procesado.
 
+Las recomendaciones y límites de normalización están en
+`docs/notes/mri-normalization.md`; el notebook
+`notebooks/02_compare_mri_normalization.ipynb` compara un volumen T1 de
+entrenamiento antes y después de aplicar z-score dentro de la máscara cerebral.
+
 ## Entorno
 
 Desde la raíz del proyecto, crea y activa un entorno virtual e instala las

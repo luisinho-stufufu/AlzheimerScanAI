@@ -29,3 +29,13 @@ con una descripción detallada.
   centrales axial, coronal y sagital.
 - Se añadió `nibabel` a las dependencias para leer volúmenes FreeSurfer MGZ.
 - Se verificó la ejecución de las celdas contra tres volúmenes T1 locales.
+
+## 2026-10-17 — Investigación y comparación de normalización
+
+- Se documentaron los pasos de corrección de bias/intensidad y normalización
+  confirmados en el `recon-all.log` de FreeSurfer incluido con los datos.
+- Se recomendaron control de calidad de máscaras y comparación de T1 FreeSurfer
+  frente a z-score dentro de máscara como baseline, sin asumir que sea la opción
+  clínicamente óptima.
+- Se añadió un notebook con comparación visual e histogramas sobre un sujeto
+  de entrenamiento.
