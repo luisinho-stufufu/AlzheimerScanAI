@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated model weights and output artifacts
+/models/*
+!/models/.gitkeep
+/outputs/*
+!/outputs/.gitkeep
+
+# Keep local configuration secrets out of Git
+.env
+.env.*
+!.env.example
