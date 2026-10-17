@@ -53,6 +53,10 @@ por partición y clase bajo `data/processed/binary_cdr/images/`. Son artefactos
 locales excluidos de Git. Los gráficos y outputs visuales del proyecto se
 redactan en inglés.
 
+El notebook `notebooks/01_inspect_split_images.ipynb` carga un sujeto
+determinista de cada partición y muestra los cortes sagital, coronal y axial de
+su volumen T1 procesado.
+
 ## Entorno
 
 Desde la raíz del proyecto, crea y activa un entorno virtual e instala las

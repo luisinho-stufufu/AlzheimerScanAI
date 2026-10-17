@@ -21,3 +21,11 @@ con una descripción detallada.
   volumen T1 disponible en los directorios locales.
 - Se añadieron gráficos de distribución de CDR y de particiones; todo el texto
   visible de los gráficos se mantiene en inglés.
+
+## 2026-10-17 — Inspección visual de volúmenes por partición
+
+- Se añadió `notebooks/01_inspect_split_images.ipynb` para cargar un sujeto
+  determinista de entrenamiento, validación y test y mostrar sus cortes
+  centrales axial, coronal y sagital.
+- Se añadió `nibabel` a las dependencias para leer volúmenes FreeSurfer MGZ.
+- Se verificó la ejecución de las celdas contra tres volúmenes T1 locales.
