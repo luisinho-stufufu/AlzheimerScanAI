@@ -1,1 +1,1 @@
-"""Reusable modules for the Oasis MRI pipeline."""
+"""Reusable modules for the AlzheimerScanAI pipeline."""

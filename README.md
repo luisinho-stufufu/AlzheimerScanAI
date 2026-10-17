@@ -1,4 +1,4 @@
-# Oasis MRI
+# AlzheimerScanAI
 
 Estructura inicial para desarrollar y ejecutar un pipeline de machine learning
 con Jupyter Notebooks. Los módulos reutilizables viven en `src/`; los notebooks
@@ -7,7 +7,7 @@ deben orquestar el análisis y apoyarse en esos módulos, evitando duplicar lóg
 ## Estructura
 
 ```text
-oasis_mri/
+AlzheimerScanAI/
 ├── config/             # Configuración del proyecto y de los experimentos
 ├── data/
 │   └── raw/
