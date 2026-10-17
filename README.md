@@ -12,10 +12,11 @@ AlzheimerScanAI/
 ├── data/
 │   └── raw/
 │       └── images      # Enlace simbólico a las imágenes originales
+├── Graphics/           # Visualizaciones del análisis
 ├── docs/
 │   ├── changes/        # Registro de cambios implementados
 │   ├── experiments/    # Registro de experimentos y resultados
-│   └── notes/          # Notas y documentación de trabajo
+│   └── notes/          # Notas, incluida la preparación de datos OASIS-1
 ├── models/             # Pesos y artefactos de modelos entrenados
 ├── notebooks/          # Exploración, entrenamiento y evaluación interactiva
 ├── outputs/            # Figuras, métricas y resultados generados
