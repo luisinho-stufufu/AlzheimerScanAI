@@ -11,7 +11,10 @@ AlzheimerScanAI/
 ├── config/             # Configuración del proyecto y de los experimentos
 ├── data/
 │   └── raw/
-│       └── images      # Enlace simbólico a las imágenes originales
+│       ├── images      # Enlace simbólico a las imágenes originales
+│       └── oasis-cross-sectional-5708aa0a98d82080.xlsx
+│                           # Enlace simbólico a metadatos OASIS-1
+│   └── processed/      # Splits locales y enlaces a los volúmenes
 ├── Graphics/           # Visualizaciones del análisis
 ├── docs/
 │   ├── changes/        # Registro de cambios implementados
@@ -34,6 +37,21 @@ AlzheimerScanAI/
 `/run/media/luisinho/Datos/Data/images`. El enlace no copia las imágenes; el
 disco externo debe estar montado en esa ruta para acceder a ellas. Los datos
 originales no se duplican en el repositorio.
+
+La hoja de metadatos enlazada en `data/raw/` se encuentra junto a los datos
+externos en `Data/text/`. Con `openpyxl` instalado, prepara la tarea binaria y
+su vista local de enlaces simbólicos mediante:
+
+```bash
+python -m src.data.prepare_binary_splits
+```
+
+El comando usa la sesión base `MR1`, asigna `CDR = 0` a `cdr_0` y `CDR > 0` a
+`cdr_gt_0`, y crea particiones por sujeto. Los manifiestos se guardan en
+`data/processed/binary_cdr/splits/`; los volúmenes T1 procesados se organizan
+por partición y clase bajo `data/processed/binary_cdr/images/`. Son artefactos
+locales excluidos de Git. Los gráficos y outputs visuales del proyecto se
+redactan en inglés.
 
 ## Entorno
 

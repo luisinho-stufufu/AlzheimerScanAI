@@ -17,8 +17,9 @@ Revisión del archivo
   adicionales. No tienen CDR y no deben contarse como sujetos independientes.
 
 La visualización está en [`../../Graphics/CDR_distribution.svg`](../../Graphics/CDR_distribution.svg).
-Su barra «Sin CDR» muestra los 181 sujetos `MR1` sin etiqueta; queda separada
-de las clases clínicas.
+Los textos de gráficos y outputs se mantienen en inglés para su presentación.
+La barra «Missing CDR» muestra los 181 sujetos `MR1` sin etiqueta; queda
+separada de las clases clínicas.
 
 ## Tratamiento de CDR ausente
 
@@ -36,22 +37,30 @@ diagnóstico de Alzheimer.
 
 ## Esquema inicial de particiones
 
-Para un primer experimento supervisado, usar una tarea binaria y una división
-aproximada 70/15/15 de los 235 sujetos etiquetados:
+La copia local de FreeSurfer contiene un volumen procesado `mri/T1.mgz` para
+226 de los 235 sujetos etiquetados. Nueve IDs con CDR (2 controles CDR 0 y 7
+con CDR > 0) no tienen un directorio/volumen correspondiente en la copia local;
+se registran como excluidos por falta de imagen y no se imputan ni cuentan en
+las particiones. Por tanto, la tarea binaria local tiene 133 sujetos CDR 0 y 93
+CDR > 0 (226 en total).
+
+Para el primer experimento supervisado, utilizar una división estratificada
+aproximada 70/15/15 de esos 226 sujetos con imagen disponible:
 
 | Partición | CDR 0 | CDR > 0 | Total |
 |---|---:|---:|---:|
-| Entrenamiento | 95 | 70 | 165 |
-| Validación | 20 | 15 | 35 |
-| Test | 20 | 15 | 35 |
-| Total | 135 | 100 | 235 |
+| Entrenamiento | 93 | 65 | 158 |
+| Validación | 20 | 14 | 34 |
+| Test | 20 | 14 | 34 |
+| Total | 133 | 93 | 226 |
 
 Estratificar por la etiqueta binaria, pero hacer la asignación por sujeto, no
 por fila/imagen. Derivar el grupo del identificador del participante ignorando
 el sufijo de visita (por ejemplo, `MR1`/`MR2`) y mantener todas las sesiones de
-un mismo sujeto en una sola partición. Las sesiones repetidas sin etiqueta no
-se añaden al conjunto supervisado inicial. Fijar y registrar la semilla y los
-identificadores asignados a cada partición.
+un mismo sujeto en una sola partición. La preparación actual usa solo la sesión
+base `MR1` y un volumen T1 procesado por participante. Las sesiones `MR2` no se
+añaden al conjunto supervisado. Se fija la semilla 42 y se guardan inventarios
+locales de los sujetos por partición.
 
 Este tamaño deja conjuntos de validación y test pequeños, por lo que sus
 métricas tendrán incertidumbre considerable. La división sirve como punto de
@@ -69,9 +78,9 @@ clínicos sin justificarlo previamente.
 
 No aplicar aumento para «crear» sujetos ni como sustituto de más datos. Primero
 construir un baseline sin aumento y comprobar correspondencia sujeto-imagen,
-calidad, orientación, registro y protocolo de preprocesamiento. Con 235 sujetos
-etiquetados —100 con CDR > 0— existe riesgo alto de sobreajuste, sobre todo si
-se entrenan modelos volumétricos grandes desde cero.
+calidad, orientación, registro y protocolo de preprocesamiento. Con 226 sujetos
+etiquetados disponibles —93 con CDR > 0— existe riesgo alto de sobreajuste,
+sobre todo si se entrenan modelos volumétricos grandes desde cero.
 
 Después del baseline, probar aumentos moderados y plausibles para RMN (por
 ejemplo, pequeñas transformaciones espaciales o variaciones de intensidad),
@@ -86,7 +95,12 @@ aumento.
 
 La descripción oficial del conjunto OASIS está disponible en
 <https://sites.wustl.edu/oasisbrains/datasets/>. La tabla local describe
-sesiones y medidas clínicas; antes de preparar el dataset final todavía hay que
-verificar qué volúmenes de imagen se utilizarán, cómo se relacionan los
-directorios/archivos con los IDs de la tabla y si las imágenes son las entradas
-apropiadas para la tarea definida.
+sesiones y medidas clínicas. Se selecciona un `mri/T1.mgz` procesado por sujeto
+como entrada inicial. Los enlaces simbólicos
+organizados y los manifiestos se generan localmente mediante
+`python -m src.data.prepare_binary_splits`; no se copian los archivos de imagen
+y los artefactos de `data/processed/` no se suben al repositorio. Los nueve
+sujetos etiquetados cuyo volumen no se encontró quedan registrados en
+`excluded.csv`. Antes de interpretar resultados, se debe revisar la calidad de
+los volúmenes FreeSurfer y confirmar que este procesamiento es apropiado para
+la tarea.

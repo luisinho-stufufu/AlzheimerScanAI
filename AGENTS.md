@@ -12,3 +12,8 @@ controles sanos. Ten en cuenta sujetos con visitas repetidas y prevén
 particiones de evaluación que eviten fuga de información entre visitas de una
 misma persona. Documenta limitaciones y conserva la reproducibilidad de los
 experimentos.
+
+Escribe en inglés todo texto visible en gráficos y outputs destinados a
+presentación (títulos, ejes, leyendas, anotaciones y nombres de artefactos).
+La documentación y las conversaciones del proyecto pueden mantenerse en
+español.

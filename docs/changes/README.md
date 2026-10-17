@@ -10,3 +10,14 @@ con una descripción detallada.
   modelos, datos y resultados.
 - Se enlazaron las imágenes originales desde el disco externo.
 - Se inicializó el repositorio Git y se añadieron las dependencias base.
+
+## 2026-10-17 — Preparación binaria de OASIS-1
+
+- Se añadió un generador reproducible de particiones por sujeto para `CDR = 0`
+  frente a `CDR > 0`, con semilla fija y manifiestos locales.
+- Se organizó un volumen T1 procesado por sujeto mediante enlaces simbólicos,
+  sin copiar ni modificar el conjunto original.
+- Se documentaron explícitamente las etiquetas ausentes y los sujetos sin
+  volumen T1 disponible en los directorios locales.
+- Se añadieron gráficos de distribución de CDR y de particiones; todo el texto
+  visible de los gráficos se mantiene en inglés.

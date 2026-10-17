@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Binary CDR Class Distribution by Data Split</title>
+  <desc id="desc">Stacked bar chart of 226 unique subjects with locally available processed T1 volumes. Training: 93 CDR 0 and 65 CDR above 0. Validation: 20 and 14. Test: 20 and 14.</desc>
+  <rect width="960" height="620" fill="#ffffff"/>
+  <text x="480" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#172b4d">Binary CDR Class Distribution by Data Split</text>
+  <text x="480" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#526276">226 unique subjects with a locally available processed T1 volume · subject-level split</text>
+
+  <line x1="125" y1="455" x2="855" y2="455" stroke="#455468" stroke-width="2"/>
+  <line x1="125" y1="95" x2="125" y2="455" stroke="#455468" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#526276" text-anchor="end">
+    <text x="110" y="460">0</text>
+    <text x="110" y="370">40</text>
+    <text x="110" y="280">80</text>
+    <text x="110" y="190">120</text>
+    <text x="110" y="100">160</text>
+  </g>
+  <g stroke="#dce3eb" stroke-width="1">
+    <line x1="125" y1="365" x2="855" y2="365"/>
+    <line x1="125" y1="275" x2="855" y2="275"/>
+    <line x1="125" y1="185" x2="855" y2="185"/>
+    <line x1="125" y1="95" x2="855" y2="95"/>
+  </g>
+  <text x="35" y="275" transform="rotate(-90 35 275)" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#34445a">Number of subjects</text>
+
+  <g>
+    <rect x="225" y="245.75" width="120" height="209.25" rx="4" fill="#277da1"/>
+    <rect x="225" y="99.5" width="120" height="146.25" rx="4" fill="#f9844a"/>
+    <rect x="465" y="410" width="120" height="45" rx="4" fill="#277da1"/>
+    <rect x="465" y="378.5" width="120" height="31.5" rx="4" fill="#f9844a"/>
+    <rect x="705" y="410" width="120" height="45" rx="4" fill="#277da1"/>
+    <rect x="705" y="378.5" width="120" height="31.5" rx="4" fill="#f9844a"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#ffffff">
+    <text x="285" y="356">93</text>
+    <text x="285" y="180">65</text>
+    <text x="525" y="439">20</text>
+    <text x="525" y="401">14</text>
+    <text x="765" y="439">20</text>
+    <text x="765" y="401">14</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#34445a">
+    <text x="285" y="484">Training (n=158)</text>
+    <text x="525" y="484">Validation (n=34)</text>
+    <text x="765" y="484">Test (n=34)</text>
+  </g>
+  <rect x="282" y="526" width="18" height="18" rx="2" fill="#277da1"/>
+  <text x="309" y="541" font-family="Arial, sans-serif" font-size="15" fill="#34445a">CDR = 0</text>
+  <rect x="455" y="526" width="18" height="18" rx="2" fill="#f9844a"/>
+  <text x="482" y="541" font-family="Arial, sans-serif" font-size="15" fill="#34445a">CDR &gt; 0</text>
+  <text x="480" y="584" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#526276">Missing labels and subjects without a local T1 volume are excluded; no images are duplicated.</text>
+</svg>

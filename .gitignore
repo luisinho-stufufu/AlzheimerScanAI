@@ -13,6 +13,7 @@ venv/
 !/models/.gitkeep
 /outputs/*
 !/outputs/.gitkeep
+/data/processed/
 
 # Keep local configuration secrets out of Git
 .env

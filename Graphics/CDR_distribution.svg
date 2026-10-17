@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
-  <title id="title">Distribución de sujetos por CDR en OASIS-1</title>
-  <desc id="desc">Gráfico de barras para 416 sujetos únicos: CDR 0, 135; CDR 0.5, 70; CDR 1, 28; CDR 2, 2; sin CDR, 181.</desc>
+  <title id="title">OASIS-1 Subject Distribution by CDR</title>
+  <desc id="desc">Bar chart for 416 unique subjects: CDR 0, 135; CDR 0.5, 70; CDR 1, 28; CDR 2, 2; missing CDR, 181.</desc>
   <rect width="1000" height="650" fill="#ffffff"/>
-  <text x="500" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#172b4d">Distribución de sujetos por CDR</text>
-  <text x="500" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#526276">OASIS-1 · 416 sujetos únicos (sesión base MR1) · 235 con CDR registrado</text>
+  <text x="500" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#172b4d">OASIS-1 Subject Distribution by CDR</text>
+  <text x="500" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#526276">416 unique subjects (baseline MR1) · 235 with recorded CDR</text>
 
   <line x1="130" y1="500" x2="900" y2="500" stroke="#455468" stroke-width="2"/>
   <line x1="130" y1="130" x2="130" y2="500" stroke="#455468" stroke-width="2"/>
@@ -21,7 +21,7 @@
     <line x1="130" y1="222.5" x2="900" y2="222.5"/>
     <line x1="130" y1="130" x2="900" y2="130"/>
   </g>
-  <text x="35" y="315" transform="rotate(-90 35 315)" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#34445a">Número de sujetos</text>
+  <text x="35" y="315" transform="rotate(-90 35 315)" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#34445a">Number of subjects</text>
 
   <g>
     <rect x="190" y="250.25" width="95" height="249.75" rx="5" fill="#277da1"/>
@@ -42,8 +42,8 @@
     <text x="387.5" y="529">CDR = 0.5</text>
     <text x="537.5" y="529">CDR = 1</text>
     <text x="687.5" y="529">CDR = 2</text>
-    <text x="837.5" y="529">Sin CDR</text>
+    <text x="837.5" y="529">Missing CDR</text>
   </g>
-  <text x="500" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#526276">La categoría «Sin CDR» indica etiqueta ausente; no constituye una clase ni implica CDR = 0.</text>
-  <text x="500" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#526276">Entre los sujetos con CDR registrado no hay observaciones con CDR = 3.</text>
+  <text x="500" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#526276">"Missing CDR" denotes an unavailable label; it is not a clinical class or CDR = 0.</text>
+  <text x="500" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#526276">No subjects with CDR = 3 are present among the records with known CDR.</text>
 </svg>
